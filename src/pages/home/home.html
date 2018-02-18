@@ -3,16 +3,39 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Design Test Paper</ion-title>
+    <ion-buttons end><button ion-button (click)="addQuestion()">Add Question</button></ion-buttons>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content>
+  <div id="export">
+<ion-list *ngFor="let question of questionList">
+  <ion-card>
+    <ion-card-header>{{question.question}}</ion-card-header>
+    <ion-card-content>
+      <ion-row>
+      <ion-item>
+        <ion-label>{{question.option1}}</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{question.option2}}</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+        <ion-item>
+          <ion-label>{{question.option3}}</ion-label>
+          <ion-checkbox></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{question.option4}}</ion-label>
+          <ion-checkbox></ion-checkbox>
+        </ion-item>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+</ion-list>
+  </div>
 </ion-content>
