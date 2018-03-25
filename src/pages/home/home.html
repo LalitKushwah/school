@@ -12,7 +12,7 @@
 
 <ion-content>
 
-<ion-list *ngFor="let question of questionList">
+<ion-list *ngFor="let question of questionList; let i = index">
   <ion-card>
     <ion-card-header></ion-card-header>
     <ion-card-content>
@@ -40,7 +40,7 @@
         </ion-item>
       </ion-row>
     </ion-card-content>
-    <ion-buttons><button ion-button (click)="getData(input.value,one.value,two.value,three.value,four.value)">Save</button></ion-buttons>
+    <ion-buttons><button ion-button (click)="getData(input.value,one.value,two.value,three.value,four.value, i)">Save</button></ion-buttons>
   </ion-card>
 </ion-list>
 

@@ -102,6 +102,14 @@ export class HomePage {
   }
 
   downloadPDF() {
+
+    this.questionList.forEach( item => {
+    this.dd.content.push({text: item.question, style: 'question'}, {ol: [{text: item.options[0]},
+      {text: item.options[1]},
+      {text: item.options[2]},
+      {text: item.options[3]}], style: 'options'});
+    });
+    console.log('===========DD=========',this.dd);
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
     pdfMake.createPdf(this.dd).download();
   }
@@ -121,12 +129,17 @@ export class HomePage {
       ];
   }
 
-  getData(question,one,two,three,four) {
+  getData(question,one,two,three,four, index) {
+    console.log('===========Index=========',index);
     console.log(question);
     console.log(one);
     console.log(two);
     console.log(three);
     console.log(four);
-
+    let data = {};
+    data['question'] = question;
+    data['options'] = [one, two, three, four];
+    this.questionList[index] = data;
+    console.log('===========Question=========',this.questionList);
   }
 }
