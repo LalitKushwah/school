@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Design Test Paper</ion-title>
-    <ion-buttons end><button ion-button (click)="addQuestion()">Add Question</button></ion-buttons>
+   <ion-buttons end><button ion-button color="pri" (click)="addQuestion()" >Add Question</button></ion-buttons>
     <ion-buttons end><button ion-button (click)="downloadPDF()">Download Paper</button></ion-buttons>
   </ion-navbar>
 
@@ -18,25 +18,29 @@
     <ion-card-content>
       <ion-row>
       <ion-item>
-        <ion-label>{{question.option1}}</ion-label>
-        <ion-checkbox></ion-checkbox>
+        <ion-select id="one">
+          <ion-option *ngFor="let option1 of question.options">{{option1}}</ion-option>
+        </ion-select>
       </ion-item>
       <ion-item>
-        <ion-label>{{question.option2}}</ion-label>
-        <ion-checkbox></ion-checkbox>
+        <ion-select>
+        <ion-option *ngFor="let option2 of question.options">{{option2}}</ion-option>
+        </ion-select>
       </ion-item>
         <ion-item>
-          <ion-label>{{question.option3}}</ion-label>
-          <ion-checkbox></ion-checkbox>
+          <ion-select>
+          <ion-option *ngFor="let option3 of question.options">{{option3}}</ion-option>
+          </ion-select>
         </ion-item>
         <ion-item>
-          <ion-label>{{question.option4}}</ion-label>
-          <ion-checkbox></ion-checkbox>
+          <ion-select>
+          <ion-option *ngFor="let option4 of question.options">{{option4}}</ion-option>
+          </ion-select>
         </ion-item>
       </ion-row>
     </ion-card-content>
+    <ion-buttons><button ion-button (click)="getData()">Save</button></ion-buttons>
   </ion-card>
-
 </ion-list>
   </div>
 </ion-content>

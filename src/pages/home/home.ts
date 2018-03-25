@@ -13,7 +13,7 @@ export class HomePage {
   questionList:any=[];
   question:any={};
   dd;
-
+  options;
 
   constructor(public navCtrl: NavController, public alertCtrl:AlertController) {
     this.dd = {
@@ -38,6 +38,16 @@ export class HomePage {
         }
       }
     };
+    this.options=[1,2,3,4];
+
+    for(let question of this.questionList) {
+      this.dd.content.push({text: question.question, style: 'question'}, {
+        ol: [{text: question.option1},
+          {text: question.option2},
+          {text: question.option3},
+          {text: question.option4}], style: 'options'
+      });
+    }
   }
 
   addQuestion() {
@@ -50,7 +60,8 @@ export class HomePage {
         },
         {
           name: 'option1',
-          placeholder: 'Enter First option'
+          placeholder: 'Enter First option',
+
         },
         {
           name:'option2',
@@ -93,5 +104,23 @@ export class HomePage {
   downloadPDF() {
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
     pdfMake.createPdf(this.dd).download();
+  }
+
+  ionViewDidEnter() {
+    this.questionList = [
+      {question: 'This is First question', options:['A','B','C','D']},
+      {question: 'This is second question', options:['A','B','C','D']},
+      {question: 'This is Third question', options:['A','B','C','D']},
+      {question: 'This is Fourth question', options:['A','B','C','D']},
+      {question: 'This is Five question', options:['A','B','C','D']},
+      {question: 'This is Six question', options:['A','B','C','D']},
+      {question: 'This is Seven question', options:['A','B','C','D']},
+      {question: 'This is Eight question', options:['A','B','C','D']},
+      {question: 'This is Nine question', options:['A','B','C','D']},
+      ];
+  }
+
+  getData() {
+    let option1 = document.getElementById('one');
   }
 }
