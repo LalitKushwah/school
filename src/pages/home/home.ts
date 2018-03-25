@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {AlertController, NavController} from 'ionic-angular';
 import  pdfMake from 'pdfmake/build/pdfmake';
 import  pdfFonts from 'pdfmake/build/vfs_fonts';
@@ -120,7 +120,11 @@ export class HomePage {
       ];
   }
 
-  getData() {
-    let option1 = document.getElementById('one');
+  getData(one,two,three,four) {
+    console.log(one);
+    console.log(two);
+    console.log(three);
+    console.log(four);
+
   }
 }

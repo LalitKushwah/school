@@ -11,36 +11,36 @@
 </ion-header>
 
 <ion-content>
-  <div id="export">
+
 <ion-list *ngFor="let question of questionList">
   <ion-card>
     <ion-card-header>{{question.question}}</ion-card-header>
     <ion-card-content>
       <ion-row>
       <ion-item>
-        <ion-select id="one">
+        <ion-select #one>
           <ion-option *ngFor="let option1 of question.options">{{option1}}</ion-option>
         </ion-select>
       </ion-item>
       <ion-item>
-        <ion-select>
+        <ion-select #two>
         <ion-option *ngFor="let option2 of question.options">{{option2}}</ion-option>
         </ion-select>
       </ion-item>
         <ion-item>
-          <ion-select>
+          <ion-select #three>
           <ion-option *ngFor="let option3 of question.options">{{option3}}</ion-option>
           </ion-select>
         </ion-item>
         <ion-item>
-          <ion-select>
+          <ion-select #four>
           <ion-option *ngFor="let option4 of question.options">{{option4}}</ion-option>
           </ion-select>
         </ion-item>
       </ion-row>
     </ion-card-content>
-    <ion-buttons><button ion-button (click)="getData()">Save</button></ion-buttons>
+    <ion-buttons><button ion-button (click)="getData(one.value,two.value,three.value,four.value)">Save</button></ion-buttons>
   </ion-card>
 </ion-list>
-  </div>
+
 </ion-content>
