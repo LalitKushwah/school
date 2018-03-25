@@ -107,6 +107,7 @@ export class HomePage {
   }
 
   ionViewDidEnter() {
+    console.log('IonViewDidEnter');
     this.questionList = [
       {question: 'This is First question', options:['A','B','C','D']},
       {question: 'This is second question', options:['A','B','C','D']},
@@ -120,7 +121,8 @@ export class HomePage {
       ];
   }
 
-  getData(one,two,three,four) {
+  getData(question,one,two,three,four) {
+    console.log(question);
     console.log(one);
     console.log(two);
     console.log(three);

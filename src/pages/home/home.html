@@ -14,9 +14,10 @@
 
 <ion-list *ngFor="let question of questionList">
   <ion-card>
-    <ion-card-header>{{question.question}}</ion-card-header>
+    <ion-card-header></ion-card-header>
     <ion-card-content>
       <ion-row>
+        <ion-input value="{{question.question}}" #input></ion-input>
       <ion-item>
         <ion-select #one>
           <ion-option *ngFor="let option1 of question.options">{{option1}}</ion-option>
@@ -39,7 +40,7 @@
         </ion-item>
       </ion-row>
     </ion-card-content>
-    <ion-buttons><button ion-button (click)="getData(one.value,two.value,three.value,four.value)">Save</button></ion-buttons>
+    <ion-buttons><button ion-button (click)="getData(input.value,one.value,two.value,three.value,four.value)">Save</button></ion-buttons>
   </ion-card>
 </ion-list>
 
