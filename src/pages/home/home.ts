@@ -117,15 +117,14 @@ export class HomePage {
   ionViewDidEnter() {
     console.log('IonViewDidEnter');
     this.questionList = [
-      {question: 'This is First question', options:['A','B','C','D']},
-      {question: 'This is second question', options:['A','B','C','D']},
-      {question: 'This is Third question', options:['A','B','C','D']},
-      {question: 'This is Fourth question', options:['A','B','C','D']},
-      {question: 'This is Five question', options:['A','B','C','D']},
-      {question: 'This is Six question', options:['A','B','C','D']},
-      {question: 'This is Seven question', options:['A','B','C','D']},
-      {question: 'This is Eight question', options:['A','B','C','D']},
-      {question: 'This is Nine question', options:['A','B','C','D']},
+      {question: 'I am ____ years old.', options:['6','7','8','9']},
+      {question: 'We love to play with friends and _________', options:['Boys','Girls','All of the above','None of the above']},
+      {question: 'The color of browny is ___________', options:['Black','Brown','Red','White']},
+      {question: 'Nonu was _______ months old', options:['3','4','5','6']},
+      {question: 'Chunky loved to jump from ____________', options:['Building','Tree','All of the above','None of the above']},
+      {question: 'Opposite of "GOOD" is : ', options:['Bad','Better','Worse','Doog']},
+      {question: 'Opposite of "COME" is : ', options:['Go','Went','In','Out']},
+      {question: 'Opposite of "EAST" is : ', options:['West','North','South','None']}
       ];
   }
 
