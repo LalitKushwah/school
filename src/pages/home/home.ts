@@ -17,7 +17,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public alertCtrl:AlertController) {
     this.dd = {
-      header: {text:'Test Paper', style: 'header'},
+      header: {text:'Name of School ___________________  \n Session 2018-19', style: 'header'},
       content: [],
 
       styles: {
@@ -109,7 +109,6 @@ export class HomePage {
       {text: item.options[2]},
       {text: item.options[3]}], style: 'options'});
     });
-    console.log('===========DD=========',this.dd);
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
     pdfMake.createPdf(this.dd).download();
   }
@@ -129,7 +128,6 @@ export class HomePage {
   }
 
   getData(question,one,two,three,four, index) {
-    console.log('===========Index=========',index);
     console.log(question);
     console.log(one);
     console.log(two);
@@ -139,6 +137,5 @@ export class HomePage {
     data['question'] = question;
     data['options'] = [one, two, three, four];
     this.questionList[index] = data;
-    console.log('===========Question=========',this.questionList);
   }
 }
