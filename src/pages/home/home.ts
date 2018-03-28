@@ -14,30 +14,33 @@ export class HomePage {
   question:any={};
   dd;
   options;
+  dog;
+  cow;
+  cat;
 
   constructor(public navCtrl: NavController, public alertCtrl:AlertController) {
-    this.dd = {
-      header: {text:'Name of School ___________________  \n Session 2018-19', style: 'header'},
-      content: [],
-
-      styles: {
-        header: {
-          fontSize: 22,
-          alignment:'center',
-          bold: true,
-
-        },
-        question: {
-          fontSize: 18,
-          alignment: 'left',
-          margin: [0, 20, 0, 20]
-        },
-        options: {
-          fontSize: 16,
-          alignment: 'left'
-        }
-      }
-    };
+    // this.dd = {
+    //   header: {text:'Name of School ___________________  \n Session 2018-19', style: 'header'},
+    //   content: [],
+    //
+    //   styles: {
+    //     header: {
+    //       fontSize: 22,
+    //       alignment:'center',
+    //       bold: true,
+    //
+    //     },
+    //     question: {
+    //       fontSize: 18,
+    //       alignment: 'left',
+    //       margin: [0, 20, 0, 20]
+    //     },
+    //     options: {
+    //       fontSize: 16,
+    //       alignment: 'left'
+    //     }
+    //   }
+    // };
     this.options=[1,2,3,4];
 
     for(let question of this.questionList) {
@@ -103,18 +106,53 @@ export class HomePage {
 
   downloadPDF() {
 
-    this.questionList.forEach( item => {
-    this.dd.content.push({text: item.question, style: 'question'}, {ol: [{text: item.options[0]},
-      {text: item.options[1]},
-      {text: item.options[2]},
-      {text: item.options[3]}], style: 'options'});
-    });
+    this.dd = {
+      content: [
+        {text: 'Name of school ___________________________________________', style: 'header'},
+        {text: 'Class Ist (Evaluation/Term - I)'},
+        {text: 'Session 2017-18'},
+        {text: 'Type Written Exam/Test'},
+        {
+          style: 'tableExample',
+          table: {
+            body: [
+              ['Subject', 'Skills', 'Asspects','Max Marks','Marks Obtained'],
+              ['English', 'Writing Skills', 'Creative Writing','',''],
+              ['English', 'Writing Skills', 'Grammer','',''],
+              ['English', 'Writing Skills', 'Vocabulary','',''],
+              ['English', 'Writing Skills', 'Hand Writing','',''],
+              ['English', 'Writing Skills', 'Spellings','','']
+            ]
+          }
+        },
+        {text: 'Roll No:________    Class: ________    Section:________    Duration:________'},
+        {text: 'Name of Student: _____________________________________________________________'},
+        {text: 'Name and sign of invigilator:_________________________________________________'},
+        {
+          style: 'tableExample',
+          table: {
+            body: [
+              ['Q.No', 'Question', 'M.O/M.M'],
+              ['Creative Writing','',''],
+              ['','1 Dog',''],
+              ['','2 Cow',''],
+              ['','3 Cat',''],
+
+            ]
+          }
+        },
+        ]};
+          /*    this.questionList.forEach( item => {
+              this.dd.content.push({text: item.question, style: 'question'}, {ol: [{text: item.options[0]},
+                {text: item.options[1]},
+                {text: item.options[2]},
+                {text: item.options[3]}], style: 'options'});
+              });*/
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
     pdfMake.createPdf(this.dd).download();
   }
 
   ionViewDidEnter() {
-    console.log('IonViewDidEnter');
     this.questionList = [
       {question: 'I am ____ years old.', options:['6','7','8','9']},
       {question: 'We love to play with friends and _________', options:['Boys','Girls','All of the above','None of the above']},
