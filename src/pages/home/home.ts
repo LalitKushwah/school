@@ -108,10 +108,10 @@ export class HomePage {
 
     this.dd = {
       content: [
-        {text: 'Name of school ___________________________________________', style: 'header'},
-        {text: 'Class Ist (Evaluation/Term - I)'},
-        {text: 'Session 2017-18'},
-        {text: 'Type Written Exam/Test'},
+        {text: 'Name of school ___________________________________________', style: 'header', margin: [0,20]},
+        {text: 'Class Ist (Evaluation/Term - I)', margin: [0,20]},
+        {text: 'Session 2017-18', margin: [0,20]},
+        {text: 'Type Written Exam/Test', margin: [0,20]},
         {
           style: 'tableExample',
           table: {
@@ -125,18 +125,80 @@ export class HomePage {
             ]
           }
         },
-        {text: 'Roll No:________    Class: ________    Section:________    Duration:________'},
-        {text: 'Name of Student: _____________________________________________________________'},
-        {text: 'Name and sign of invigilator:_________________________________________________'},
+        {text: 'Roll No:________    Class: ________    Section:________    Duration:________', margin: [0,20]},
+        {text: 'Name of Student: _____________________________________________________________', margin: [0,20]},
+        {text: 'Name and sign of invigilator:_________________________________________________', margin: [0,20]},
         {
           style: 'tableExample',
           table: {
+            widths: ['auto', 'auto', 'auto'],
+            headerRows: 1,
             body: [
-              ['Q.No', 'Question', 'M.O/M.M'],
-              ['Creative Writing','',''],
-              ['','1 Dog',''],
-              ['','2 Cow',''],
-              ['','3 Cat',''],
+              [{text: 'Q.No', style: 'tableHeader'}, {text: 'Question', style: 'tableHeader'}, {text: 'M.O/M.M', style: 'tableHeader'}],
+              [{text: 'Creative Writing', colSpan: 2},{},{}],
+              [{text: '1', rowSpan:13},{ text: 'Write 5 lines (Any 1 out of 3 ) \n' +
+              '1. Dog\n' +
+              '2. Cow\n' +
+              '3. Cat\n' +
+              '_________________________________________________________________________________\n' +
+              '_________________________________________________________________________________\n' +
+              '_________________________________________________________________________________\n' +
+              '_________________________________________________________________________________\n' +
+              '_________________________________________________________________________________\n' +
+              '_________________________________________________________________________________\n' +
+              '_________________________________________________________________________________\n' +
+              '_________________________________________________________________________________\n' +
+              '_________________________________________________________________________________\n', rowSpan:13},{text: '',rowSpan:13}],
+              [{},{text: 'Total (Creative Writing)'},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{text: 'Total (Creative Writing)', alignment: 'right'},{}],
+
+            ]
+          }
+        }, // Question 1 Creative Writing
+        {
+          style: 'tableExample',
+          table: {
+            widths: ['auto', 400, 'auto'],
+            headerRows: 1,
+            body: [
+              [{text: 'Q.No', style: 'tableHeader'}, {text: 'Question', style: 'tableHeader'}, {text: 'M.O/M.M', style: 'tableHeader'}],
+              [{text: 'Grammar', colSpan: 2},{},{}],
+              [{text: '1'},{ text: 'Write Vowels and Consonants separately. \n\n\n  \n ' +
+              '1. Mouse \n ' +
+              'V: _________________\n' +
+              'C: _________________' +
+              '\n\n Boat \n ' +
+              'V: __________________\n' +
+              'C: ___________________'},{text: ''}],
+
+
+              [{text: '2'},{ text: 'Circle the Vowels:  \n\n\n\n ' +
+              '1. B       N       I      D     O \n ' +
+              '\n\n2.  L     O     U     S      M \n '},{text: ''}],
+
+
+              [{text: '3'},{ text: 'Translate the words in Hindi:   \n\n\n\n ' +
+              '1. some : _____________________________ \n ' +
+              '\n\n2.  any : _______________________________\n '},{text: ''}],
+
+
+              [{text: '4'},{ text: 'Match the words with their Meanings:  \n\n\n\n ' +
+              '1. Safe                      To Go Out\n ' +
+              '2. Actual                    Lovely\n' +
+              '3. Cute                      Not in Danger\n' +
+              '4. Exit                      Real\n'},{text: ''}],
+              [{},{text: 'Total (Grammar)', alignment: 'right'},{}],
 
             ]
           }
@@ -149,7 +211,8 @@ export class HomePage {
                 {text: item.options[3]}], style: 'options'});
               });*/
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
-    pdfMake.createPdf(this.dd).download();
+    pdfMake.createPdf(this.dd).open();
+    // pdfMake.createPdf(this.dd).download();
   }
 
   ionViewDidEnter() {
