@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Design Test Paper</ion-title>
-   <ion-buttons end><button ion-button color="pri" (click)="addQuestion()" >Add Question</button></ion-buttons>
+   <ion-buttons end><button ion-button color="pri" (click)="addQuestion()">Add Question</button></ion-buttons>
     <ion-buttons end><button ion-button (click)="downloadPDF()">Download Paper</button></ion-buttons>
   </ion-navbar>
 
@@ -28,6 +28,8 @@
       </ion-row>
     </ion-grid>
   </ion-item>
+
+
   <table>
     <thead>
       <tr>
@@ -119,19 +121,19 @@
       <td>
         <strong>Write 5 lines (Any 1 out of 3)</strong>
         <ion-select #firstValue (ionChange)="getValue('1',firstValue.value)">
-          <ion-option selected>1.Dog</ion-option>
-          <ion-option>2.Cow</ion-option>
-          <ion-option>3.Cat</ion-option>
+          <ion-option selected>Dog</ion-option>
+          <ion-option>Cow</ion-option>
+          <ion-option>Cat</ion-option>
         </ion-select>
         <ion-select #secondValue (ionChange)="getValue('2',secondValue.value)">
-          <ion-option>1.Dog</ion-option>
-          <ion-option selected>2.Cow</ion-option>
-          <ion-option>3.Cat</ion-option>
+          <ion-option>Dog</ion-option>
+          <ion-option selected>Cow</ion-option>
+          <ion-option>Cat</ion-option>
         </ion-select>
         <ion-select #thirdValue (ionChange)="getValue('3',thirdValue.value)">
-          <ion-option>1.Dog</ion-option>
-          <ion-option>2.Cow</ion-option>
-          <ion-option selected>3.Cat</ion-option>
+          <ion-option>Dog</ion-option>
+          <ion-option>Cow</ion-option>
+          <ion-option selected>Cat</ion-option>
         </ion-select>
         <p>_________________________________________________________________________</p>
         <p>_________________________________________________________________________</p>
@@ -251,6 +253,63 @@
       <td></td>
     </tr>
     <tr>
+      <td>5</td>
+      <td>
+        <strong>Put the words in 4 different heads of name, place, animal and thing:</strong>
+        <ion-select #differentheads (ionChange)="getDifferentHeads(differentheads.value)">
+          <ion-option selected>Amit Pot India Mitu Rabbit</ion-option>
+          <ion-option>Shyam Plate America Rahul Cow</ion-option>
+        </ion-select>
+        <table class="blank">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Place</th>
+              <th>Animal</th>
+              <th>Thing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>
+        <strong>Give opposites:</strong>
+        <ion-select #giveoppositefirst (ionChange)="getOpposite('1',giveoppositefirst.value)">
+          <ion-option selected>good</ion-option>
+          <ion-option>come</ion-option>
+          <ion-option>east</ion-option>
+        </ion-select>
+        <ion-select #giveoppositesecond (ionChange)="getOpposite('2',giveoppositesecond.value)">
+          <ion-option>good</ion-option>
+          <ion-option selected>come</ion-option>
+          <ion-option>east</ion-option>
+        </ion-select>
+        <ion-select #giveoppositethird (ionChange)="getOpposite('3',giveoppositethird.value)">
+          <ion-option>good</ion-option>
+          <ion-option>come</ion-option>
+          <ion-option selected>east</ion-option>
+        </ion-select>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
       <td></td>
       <td class="text-right">
         <strong>Total (Grammar)</strong>
@@ -260,225 +319,117 @@
     </tbody>
   </table>
 
-  <div class="row">
-    <div class="col">Q.No</div>
-    <div class="col">Question</div>
-    <div class="col">M.O/M.M</div>
-  </div>
-
-  <div class="row">
-    <div class="col">5</div>
-    <div class="col">Put the words in 4 different heads of name, place, animal and thing.</div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #differentheads (ionChange)="getDifferentHeads(differentheads.value)">
-        <ion-option>Amit Pot India Mitu Rabbit</ion-option>
-        <ion-option>Shyam Plate America Rahul Cow</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-    <!-- Need to insert a table-->
-  </div>
-
-  <div class="row">
-    <div class="col">6</div>
-    <div class="col">give opposites:</div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #giveoppositefirst (ionChange)="getOpposite('1',giveoppositefirst.value)">
-        <ion-option>good</ion-option>
-        <ion-option>come</ion-option>
-        <ion-option>east</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #giveoppositesecond (ionChange)="getOpposite('2',giveoppositesecond.value)">
-        <ion-option>good</ion-option>
-        <ion-option>come</ion-option>
-        <ion-option>east</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #giveoppositethird (ionChange)="getOpposite('3',giveoppositethird.value)">
-        <ion-option>good</ion-option>
-        <ion-option>come</ion-option>
-        <ion-option>east</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col">Total (Grammar)</div>
-  </div>
-
-  <div class="row">
-    <div class="col">Vocabulary</div>
-  </div>
-
-  <div class="row">
-    <div class="col">1</div>
-    <div class="col">Answer the following questions:</div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #answerthefollowingquesfirst (ionChange)="getAnsTheFollowQues('1',answerthefollowingquesfirst.value)">
+  <table class="question">
+    <thead>
+    <tr>
+      <th>Q.No</th>
+      <th>Question</th>
+      <th>M.O/M.M</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td colspan="2">
+        <h5><strong>Vocabulary</strong></h5>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>
+        <strong>Answer the following questions:</strong>
+        <ion-select #answerthefollowingquesfirst (ionChange)="getAnsTheFollowQues('1',answerthefollowingquesfirst.value)">
+          <ion-option selected>Are you a baby girl ?</ion-option>
+          <ion-option>List any two items that pets like to eat.</ion-option>
+          <ion-option>Write names of any two pet animals. </ion-option>
+          <ion-option>Where did Nonu lives ?</ion-option>
+          <ion-option>Who took out Sheena's kite?</ion-option>
+        </ion-select>
+        ______________________________________________________________________________________________
+        <ion-select #answerthefollowingquessecond (ionChange)="getAnsTheFollowQues('2',answerthefollowingquessecond.value)">
+          <ion-option>Are you a baby girl ?</ion-option>
+          <ion-option selected>List any two items that pets like to eat.</ion-option>
+          <ion-option>Write names of any two pet animals. </ion-option>
+          <ion-option>Where did Nonu lives ?</ion-option>
+          <ion-option>Who took out Sheena's kite?</ion-option>
+        </ion-select>
+        ______________________________________________________________________________________________
+        <ion-select #answerthefollowingquesthird (ionChange)="getAnsTheFollowQues('3',answerthefollowingquesthird.value)">
         <ion-option>Are you a baby girl ?</ion-option>
         <ion-option>List any two items that pets like to eat.</ion-option>
-        <ion-option>Write names of any two pet animals. </ion-option>
+        <ion-option selected>Write names of any two pet animals. </ion-option>
         <ion-option>Where did Nonu lives ?</ion-option>
         <ion-option>Who took out Sheena's kite?</ion-option>
       </ion-select>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #answerthefollowingquessecond (ionChange)="getAnsTheFollowQues('2',answerthefollowingquessecond.value)">
-        <ion-option>Are you a baby girl ?</ion-option>
-        <ion-option>List any two items that pets like to eat.</ion-option>
-        <ion-option>Write names of any two pet animals. </ion-option>
-        <ion-option>Where did Nonu lives ?</ion-option>
-        <ion-option>Who took out Sheena's kite?</ion-option>
-      </ion-select>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #answerthefollowingquesthird (ionChange)="getAnsTheFollowQues('3',answerthefollowingquesthird.value)">
-        <ion-option>Are you a baby girl ?</ion-option>
-        <ion-option>List any two items that pets like to eat.</ion-option>
-        <ion-option>Write names of any two pet animals. </ion-option>
-        <ion-option>Where did Nonu lives ?</ion-option>
-        <ion-option>Who took out Sheena's kite?</ion-option>
-      </ion-select>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #answerthefollowingquesfourth (ionChange)="getAnsTheFollowQues('4',answerthefollowingquesfourth.value)">
-        <ion-option>Are you a baby girl ?</ion-option>
-        <ion-option>List any two items that pets like to eat.</ion-option>
-        <ion-option>Write names of any two pet animals. </ion-option>
-        <ion-option>Where did Nonu lives ?</ion-option>
-        <ion-option>Who took out Sheena's kite?</ion-option>
-      </ion-select>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #answerthefollowingquesfive (ionChange)="getAnsTheFollowQues('5',answerthefollowingquesfive.value)">
-        <ion-option>Are you a baby girl ?</ion-option>
-        <ion-option>List any two items that pets like to eat.</ion-option>
-        <ion-option>Write names of any two pet animals. </ion-option>
-        <ion-option>Where did Nonu lives ?</ion-option>
-        <ion-option>Who took out Sheena's kite?</ion-option>
-      </ion-select>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col">8</div>
-    <div class="col">Fill in the blanks:</div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #fillintheblanksfirst (ionChange)="getFillInTheBlanks('1',fillintheblanksfirst.value)">
-        <ion-option>I am _______________years old ?</ion-option>
-        <ion-option>We love to play with friends and ____________ </ion-option>
-        <ion-option>The colony of browny is ___________</ion-option>
-        <ion-option>Nonu was ____________ months old</ion-option>
-        <ion-option>Chunky loved to jump from ____________</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #fillintheblankssecond (ionChange)="getFillInTheBlanks('2',fillintheblankssecond.value)">
-        <ion-option>I am _______________years old ?</ion-option>
-        <ion-option>We love to play with friends and ____________ </ion-option>
-        <ion-option>The colony of browny is ___________</ion-option>
-        <ion-option>Nonu was ____________ months old</ion-option>
-        <ion-option>Chunky loved to jump from ____________</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #fillintheblanksthird (ionChange)="getFillInTheBlanks('3',fillintheblanksthird.value)">
-        <ion-option>I am _______________years old ?</ion-option>
-        <ion-option>We love to play with friends and ____________ </ion-option>
-        <ion-option>The colony of browny is ___________</ion-option>
-        <ion-option>Nonu was ____________ months old</ion-option>
-        <ion-option>Chunky loved to jump from ____________</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #fillintheblanksfour (ionChange)="getFillInTheBlanks('4',fillintheblanksfour.value)">
-        <ion-option>I am _______________years old ?</ion-option>
-        <ion-option>We love to play with friends and ____________ </ion-option>
-        <ion-option>The colony of browny is ___________</ion-option>
-        <ion-option>Nonu was ____________ months old</ion-option>
-        <ion-option>Chunky loved to jump from ____________</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #fillintheblanksfive (ionChange)="getFillInTheBlanks('5',fillintheblanksfour.value)">
-        <ion-option>I am _______________years old ?</ion-option>
-        <ion-option>We love to play with friends and ____________ </ion-option>
-        <ion-option>The colony of browny is ___________</ion-option>
-        <ion-option>Nonu was ____________ months old</ion-option>
-        <ion-option>Chunky loved to jump from ____________</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
+        ______________________________________________________________________________________________
+        <ion-select #answerthefollowingquesfourth (ionChange)="getAnsTheFollowQues('4',answerthefollowingquesfourth.value)">
+          <ion-option>Are you a baby girl ?</ion-option>
+          <ion-option>List any two items that pets like to eat.</ion-option>
+          <ion-option>Write names of any two pet animals. </ion-option>
+          <ion-option selected>Where did Nonu lives ?</ion-option>
+          <ion-option>Who took out Sheena's kite?</ion-option>
+        </ion-select>
+        ______________________________________________________________________________________________
+        <ion-select #answerthefollowingquesfive (ionChange)="getAnsTheFollowQues('5',answerthefollowingquesfive.value)">
+          <ion-option>Are you a baby girl ?</ion-option>
+          <ion-option>List any two items that pets like to eat.</ion-option>
+          <ion-option>Write names of any two pet animals. </ion-option>
+          <ion-option>Where did Nonu lives ?</ion-option>
+          <ion-option selected>Who took out Sheena's kite?</ion-option>
+        </ion-select>
+        ______________________________________________________________________________________________
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>
+        <strong>Fill in the blanks:</strong>
+        <ion-select #fillintheblanksfirst (ionChange)="getFillInTheBlanks('1',fillintheblanksfirst.value)">
+          <ion-option selected>I am _______________years old ?</ion-option>
+          <ion-option>We love to play with friends and ____________ </ion-option>
+          <ion-option>The colony of browny is ___________</ion-option>
+          <ion-option>Nonu was ____________ months old</ion-option>
+          <ion-option>Chunky loved to jump from ____________</ion-option>
+        </ion-select>
+        <ion-select #fillintheblankssecond (ionChange)="getFillInTheBlanks('2',fillintheblankssecond.value)">
+          <ion-option>I am _______________years old ?</ion-option>
+          <ion-option selected>We love to play with friends and ____________ </ion-option>
+          <ion-option>The colony of browny is ___________</ion-option>
+          <ion-option>Nonu was ____________ months old</ion-option>
+          <ion-option>Chunky loved to jump from ____________</ion-option>
+        </ion-select>
+        <ion-select #fillintheblanksthird (ionChange)="getFillInTheBlanks('3',fillintheblanksthird.value)">
+          <ion-option>I am _______________years old ?</ion-option>
+          <ion-option>We love to play with friends and ____________ </ion-option>
+          <ion-option selected>The colony of browny is ___________</ion-option>
+          <ion-option>Nonu was ____________ months old</ion-option>
+          <ion-option>Chunky loved to jump from ____________</ion-option>
+        </ion-select>
+        <ion-select #fillintheblanksfour (ionChange)="getFillInTheBlanks('4',fillintheblanksfour.value)">
+          <ion-option>I am _______________years old ?</ion-option>
+          <ion-option>We love to play with friends and ____________ </ion-option>
+          <ion-option>The colony of browny is ___________</ion-option>
+          <ion-option selected>Nonu was ____________ months old</ion-option>
+          <ion-option>Chunky loved to jump from ____________</ion-option>
+        </ion-select>
+        <ion-select #fillintheblanksfive (ionChange)="getFillInTheBlanks('5',fillintheblanksfour.value)">
+          <ion-option>I am _______________years old ?</ion-option>
+          <ion-option>We love to play with friends and ____________ </ion-option>
+          <ion-option>The colony of browny is ___________</ion-option>
+          <ion-option>Nonu was ____________ months old</ion-option>
+          <ion-option selected>Chunky loved to jump from ____________</ion-option>
+        </ion-select>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="text-right">
+        <strong>Total (Vocabulary)</strong>
+      </td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
 </ion-content>

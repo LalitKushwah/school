@@ -17,7 +17,7 @@ page-home {
       border: 1px solid #2d2d2d!important;
       ion-select {
         text-align: left!important;
-        width: 15%!important;
+        width: 25%!important;
       }
       text-align: left!important;
     }
@@ -26,11 +26,16 @@ page-home {
     }
   }
 
-  .alert-radio-label span {
-    margin-right: 25px!important;
-  }
-
-  span.width50 {
-    width: 50px;
+  table.blank {
+    thead tr th:first-child, tbody tr td:first-child{
+      text-align: center!important;
+      width: 30%;
+    }
+    thead tr th:last-child, tbody tr td:last-child{
+      width: 30%;
+    }
+    tbody tr td {
+      height: 90px;
+    }
   }
 }
