@@ -1,3 +1,36 @@
 page-home {
+  span.border {
+    padding: 5px;
+    border: 1px solid #090909;
+    border-radius: 5px;
+  }
 
+  table.question {
+    border: 1px solid#2d2d2d;
+    thead tr th:first-child, tbody tr td:first-child{
+      width: 5%;
+    }
+    thead tr th:last-child, tbody tr td:last-child{
+      width: 5%;
+    }
+    tbody td{
+      border: 1px solid #2d2d2d!important;
+      ion-select {
+        text-align: left!important;
+        width: 7%!important;
+      }
+      text-align: left!important;
+    }
+    thead th {
+      border: 1px solid #2d2d2d!important;
+    }
+  }
+
+  .alert-radio-label span {
+    margin-right: 25px!important;
+  }
+
+  span.width50 {
+    width: 50px;
+  }
 }

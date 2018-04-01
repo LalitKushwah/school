@@ -12,299 +12,252 @@
 
 <ion-content>
   <ion-item no-lines>Name of school _______________________________________________________________</ion-item>
-  <ion-item no-lines>Class Ist (Evaluation/Term - I)</ion-item>
-  <ion-item no-lines>Session 2017-18</ion-item>
-  <ion-item no-lines>Type Written Exam/Test</ion-item>
-  <div class="row header" padding-left="100px">
-    <div class="col">Subject</div>
-    <div class="col">Skills</div>
-    <div class="col">Aspects</div>
-    <div class="col">Max Marks</div>
-    <div class="col">Marks Obtained</div>
-  </div>
-  <div class="row" padding-left="100px">
-    <div class="col">English</div>
-    <div class="col">Written Skils</div>
-    <div class="col">Creative Writing</div>
-    <div class="col"></div>
-    <div class="col"> </div>
-  </div>
-  <div class="row" padding-left="100px">
-    <div class="col">English</div>
-    <div class="col">Written Skils</div>
-    <div class="col">Grammar</div>
-    <div class="col"></div>
-    <div class="col"></div>
-  </div>
-  <div class="row" padding-left="100px">
-    <div class="col">English</div>
-    <div class="col">Written Skils</div>
-    <div class="col">Vocabulary</div>
-    <div class="col"></div>
-    <div class="col"></div>
-  </div>
-  <div class="row" padding-left="100px">
-    <div class="col">English</div>
-    <div class="col">Written Skils</div>
-    <div class="col">Hand Writing</div>
-    <div class="col"></div>
-    <div class="col"></div>
-  </div>
-  <div class="row" padding-left="100px">
-  <div class="col">English</div>
-  <div class="col">Written Skils</div>
-  <div class="col">Spellings</div>
-  <div class="col"></div>
-  <div class="col"></div>
- </div>
+  <ion-item no-lines>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-5>
+          <span class="border">Class Ist (Evaluation/Term - I)</span>
+        </ion-col>
+        <ion-col col-3>
+          <span>Session 2017-18</span>
+          <p>Subject : English</p>
+        </ion-col>
+        <ion-col col-4 text-center>
+          <span class="border">Type Written Exam/Test</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <table>
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Skills</th>
+        <th>Aspects</th>
+        <th>Max. Marks</th>
+        <th>Marks Obtained</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>English</td>
+        <td>Written Skills</td>
+        <td>Creative Writing</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>English</td>
+        <td>Written Skills</td>
+        <td>Grammar</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>English</td>
+        <td>Written Skills</td>
+        <td>Vocabulary</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>English</td>
+        <td>Written Skills</td>
+        <td>Hand Writing</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>English</td>
+        <td>Written Skills</td>
+        <td>Spellings</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+  <ion-item no-lines>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+          <span>Roll No. _______________</span>
+        </ion-col>
+        <ion-col col-3>
+          <span>Class: _______________</span>
+        </ion-col>
+        <ion-col col-3>
+          <span>Section: _______________</span>
+        </ion-col>
+        <ion-col col-3>
+          <span>Duration: _______________</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
 
-  <ion-item no-lines padding-top="50px">Roll No. _______________     Class: _______________    Section: _______________    Duration: _______________</ion-item>
-  <ion-item no-lines>Name of Student ___________________________________________________</ion-item>
-  <ion-item no-lines>Name and Sign of Invigilator ________________________________________________</ion-item>
 
-  <div class="row" padding="100px">
-    <div class="col">Q. No</div>
-    <div class="col">Question</div>
-    <div class="col">M.O/M.M</div>
-  </div>
+  <ion-item no-lines>Name of Student: ______________________________________________________________________________________________________________________________________________________________________________________________________________________</ion-item>
+  <ion-item no-lines>Name and Sign of Invigilator: ___________________________________________________________________________________________________________________________________________________________________________________________________________</ion-item>
 
-  <div class="row" padding="100px">
-    <div class="col">Creative Writing</div>
-  </div>
-  <div class="row" padding="50px">
-    <div class="col">1</div>
-    <div class="col">Write 5 lines (Any 1 out of 3)</div>
-    <div class="col"></div>
-  </div>
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #firstValue (ionChange)="getValue('1',firstValue.value)">
-        <ion-option>Dog</ion-option>
-        <ion-option>Cow</ion-option>
-        <ion-option>Cat</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #secondValue (ionChange)="getValue('2',secondValue.value)">
-        <ion-option>Dog</ion-option>
-        <ion-option>Cow</ion-option>
-        <ion-option>Cat</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #thirdValue (ionChange)="getValue('3',thirdValue.value)">
-        <ion-option>Dog</ion-option>
-        <ion-option>Cow</ion-option>
-        <ion-option>Cat</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-    ___________________________________________________________________________________________
-    </div>
-    <div class="col"></div>
-  </div>
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      ___________________________________________________________________________________________
-    </div>
-    <div class="col"></div>
-  </div>  <div class="row">
-  <div class="col"></div>
-  <div class="col">
-    ___________________________________________________________________________________________
-  </div>
-  <div class="col"></div>
-</div>  <div class="row">
-  <div class="col"></div>
-  <div class="col">
-    ___________________________________________________________________________________________
-  </div>
-  <div class="col"></div>
-</div>
-  <div class="row">
-  <div class="col"></div>
-  <div class="col">
-    ___________________________________________________________________________________________
-  </div>
-  <div class="col"></div>
-</div>
-  <div class="row" padding="100px">
-    <div class="col">Q. No</div>
-    <div class="col">Question</div>
-    <div class="col">M.O/M.M</div>
-  </div>
+  <table class="question">
+    <thead>
+    <tr>
+      <th>Q.No</th>
+      <th>Question</th>
+      <th>M.O/M.M</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td colspan="2">
+        <h5><strong>Creative Writing</strong></h5>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>
+        <strong>Write 5 lines (Any 1 out of 3)</strong>
+        <ion-select #firstValue (ionChange)="getValue('1',firstValue.value)">
+          <ion-option selected>1.Dog</ion-option>
+          <ion-option>2.Cow</ion-option>
+          <ion-option>3.Cat</ion-option>
+        </ion-select>
+        <ion-select #secondValue (ionChange)="getValue('2',secondValue.value)">
+          <ion-option>1.Dog</ion-option>
+          <ion-option selected>2.Cow</ion-option>
+          <ion-option>3.Cat</ion-option>
+        </ion-select>
+        <ion-select #thirdValue (ionChange)="getValue('3',thirdValue.value)">
+          <ion-option>1.Dog</ion-option>
+          <ion-option>2.Cow</ion-option>
+          <ion-option selected>3.Cat</ion-option>
+        </ion-select>
+        <p>_________________________________________________________________________</p>
+        <p>_________________________________________________________________________</p>
+        <p>_________________________________________________________________________</p>
+        <p>_________________________________________________________________________</p>
+        <p>_________________________________________________________________________</p>
+        <p>_________________________________________________________________________</p>
+        <p>_________________________________________________________________________</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="text-right">
+        <strong>Total (Creative Writing)</strong>
+      </td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
 
-  <div class="row" padding="100px">
-    <div class="col">Grammer</div>
-  </div>
-  <div class="row" padding="50px">
-    <div class="col">1</div>
-    <div class="col">Write vowels and consonants separately</div>
-    <div class="col"></div>
-  </div>
-  <div class="row" padding="50px">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #vowelconsonantfirst (ionChange)="getVowelsConsonants('1',vowelconsonantfirst.value)">
-        <ion-option>Mouse</ion-option>
-        <ion-option>Boat</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-  <div class="row" padding="50px">
-    <div class="col"></div>
-    <div class="col">V: __________________</div>
-    <div class="col"></div>
-  </div>
-  <div class="row" padding="50px">
-    <div class="col"></div>
-    <div class="col">C: __________________</div>
-    <div class="col"></div>
-  </div>
-  <div class="row" padding="50px">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #vowelconsonantsecond (ionChange)="getVowelsConsonants('2',vowelconsonantsecond.value)">
-      <ion-option>Mouse</ion-option>
-      <ion-option>Boat</ion-option>
-    </ion-select></div>
-    <div class="col"></div>
-  </div>
-  <div class="row" padding="50px">
-    <div class="col"></div>
-    <div class="col">V: __________________</div>
-    <div class="col"></div>
-  </div>
-  <div class="row" padding="50px">
-    <div class="col"></div>
-    <div class="col">C: __________________</div>
-    <div class="col"></div>
-  </div>
-  <div class="row" padding="50px">
-    <div class="col">2. </div>
-    <div class="col">Cirlce the Vowels</div>
-    <div class="col"></div>
-  </div>
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
+  <table class="question">
+    <thead>
+    <tr>
+      <th>Q.No</th>
+      <th>Question</th>
+      <th>M.O/M.M</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td colspan="2">
+        <h5>
+          <strong>Grammar</strong>
+        </h5>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>
+        <strong>Write vowels and consonants separately</strong>
+        <ion-select #vowelconsonantfirst (ionChange)="getVowelsConsonants('1',vowelconsonantfirst.value)">
+          <ion-option selected>Mouse</ion-option>
+          <ion-option>Boat</ion-option>
+        </ion-select>
+        <p>V: __________________</p>
+        <p>C: __________________</p>
+        <ion-select #vowelconsonantsecond (ionChange)="getVowelsConsonants('2',vowelconsonantsecond.value)">
+          <ion-option>Mouse</ion-option>
+          <ion-option selected>Boat</ion-option>
+        </ion-select>
+        <p>V: __________________</p>
+        <p>C: __________________</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>
+        <strong>Circle the vowels</strong>
         <ion-select #circlethevowelsfirst (ionChange)="circleTheVowels('1',circlethevowelsfirst.value)">
-          <ion-option>B  N  I  D  O</ion-option>
+          <ion-option selected>B  N  I  D  O</ion-option>
           <ion-option>L  O  U  S  M</ion-option>
         </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #circlethevowelssecond (ionChange)="circleTheVowels('2',circlethevowelssecond.value)">
-        <ion-option>B  N  I  D  O</ion-option>
-        <ion-option>L  O  U  S  M</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row" padding="50px">
-    <div class="col">3. </div>
-    <div class="col">Translate the words in hindi</div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #translateinhindifirst (ionChange)="translateInHindi('1',translateinhindifirst.value)">
-        <ion-option>some</ion-option>
+        <ion-select #circlethevowelssecond (ionChange)="circleTheVowels('2',circlethevowelssecond.value)">
+          <ion-option>B  N  I  D  O</ion-option>
+          <ion-option selected>L  O  U  S  M</ion-option>
+        </ion-select>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>
+        <strong>Translate the words in hindi</strong>
+        <ion-select #translateinhindifirst (ionChange)="translateInHindi('1',translateinhindifirst.value)">
+        <ion-option selected>some</ion-option>
         <ion-option>any</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #translateinhindisecond (ionChange)="translateInHindi('2',translateinhindisecond.value)">
-        <ion-option>some</ion-option>
-        <ion-option>any</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row" padding="50px">
-    <div class="col">4. </div>
-    <div class="col">Match the words with their meanings:</div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #matchthecolumnfirst (ionChange)="matchTheColumn('1',matchthecolumnfirst.value)">
-        <ion-option>safe      To Go out</ion-option>
-        <ion-option>Actual     Lovely</ion-option>
-        <ion-option>Cute       Not in danger</ion-option>
-        <ion-option>Exit       Real</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #matchthecolumnsecond (ionChange)="matchTheColumn('2',matchthecolumnsecond.value)">
-        <ion-option>safe       To Go out</ion-option>
-        <ion-option>Actual     Lovely</ion-option>
-        <ion-option>Cute       Not in danger</ion-option>
-        <ion-option>Exit       Real</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #matchthecolumnthird (ionChange)="matchTheColumn('3',matchthecolumnthird.value)">
-        <ion-option>safe       To Go out</ion-option>
-        <ion-option>Actual     Lovely</ion-option>
-        <ion-option>Cute       Not in danger</ion-option>
-        <ion-option>Exit       Real</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col">
-      <ion-select #matchthecolumnfourth (ionChange)="matchTheColumn('4',matchthecolumnfourth.value)">
-        <ion-option>safe       To Go out</ion-option>
-        <ion-option>Actual     Lovely</ion-option>
-        <ion-option>Cute       Not in danger</ion-option>
-        <ion-option>Exit       Real</ion-option>
-      </ion-select>
-    </div>
-    <div class="col"></div>
-  </div>
+        </ion-select>
+        <ion-select #translateinhindisecond (ionChange)="translateInHindi('2',translateinhindisecond.value)">
+          <ion-option>some</ion-option>
+          <ion-option selected>any</ion-option>
+        </ion-select>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>
+        <strong>Match the words with their meanings:</strong>
+        <ion-select #matchthecolumnfirst (ionChange)="matchTheColumn('1',matchthecolumnfirst.value)">
+          <ion-option selected>safe               To Go out</ion-option>
+          <ion-option>Actual  Lovely</ion-option>
+          <ion-option>Cute Not in danger</ion-option>
+          <ion-option>Exit Real</ion-option>
+        </ion-select>
+        <ion-select #matchthecolumnsecond (ionChange)="matchTheColumn('2',matchthecolumnsecond.value)">
+          <ion-option>safe       To Go out</ion-option>
+          <ion-option selected>Actual     Lovely</ion-option>
+          <ion-option>Cute       Not in danger</ion-option>
+          <ion-option>Exit       Real</ion-option>
+        </ion-select>
+        <ion-select #matchthecolumnthird (ionChange)="matchTheColumn('3',matchthecolumnthird.value)">
+          <ion-option>safe       To Go out</ion-option>
+          <ion-option>Actual     Lovely</ion-option>
+          <ion-option selected>Cute       Not in danger</ion-option>
+          <ion-option>Exit       Real</ion-option>
+        </ion-select>
+        <ion-select #matchthecolumnfourth (ionChange)="matchTheColumn('4',matchthecolumnfourth.value)">
+          <ion-option>safe       To Go out</ion-option>
+          <ion-option>Actual     Lovely</ion-option>
+          <ion-option>Cute       Not in danger</ion-option>
+          <ion-option selected>Exit       Real</ion-option>
+        </ion-select>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="text-right">
+        <strong>Total (Grammar)</strong>
+      </td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
 
 </ion-content>

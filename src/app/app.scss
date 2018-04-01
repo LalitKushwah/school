@@ -14,3 +14,49 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+table{
+  border:2px solid #000000;
+  border-collapse:collapse;
+  width:90%;
+  padding-bottom:15px;
+  margin: 25px;
+  margin-top: 10px!important;
+
+  thead tr th{
+    font-size:14px;
+    font-weight:600;
+    font-family:lato,sans-serif;
+    text-align:left;
+    padding:10px 5px;
+    text-transform:uppercase;
+    text-align:center;
+    border: 2px solid #000000;
+  }
+  thead tr th:first-child, tbody tr td:first-child{
+    text-align:left;
+    padding:10px 0;
+    padding-left: 10px;
+    vertical-align: top!important;
+  }
+  tbody tr{
+    border-top:1px solid #f0f0f0;
+
+    td {
+      font-size:14px;
+      font-weight:400;
+      padding:10px 5px;
+      font-family:lato,sans-serif;
+      text-align:center;
+      border: 2px solid #000000;
+    }
+  }
+}
+
+.text-right {
+  float: right!important;
+}
+
+.margin-right-25px {
+  margin-right: 25px!important;
+}
