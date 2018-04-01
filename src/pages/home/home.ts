@@ -14,9 +14,20 @@ export class HomePage {
   question:any={};
   dd;
   options;
-  dog;
-  cow;
-  cat;
+  firstValue;
+  secondValue;
+  thirdValue;
+  vowelconsonantfirst;
+  vowelconsonantsecond;
+  circlethevowelsfirst;
+  circlethevowelssecond;
+  translateinhindifirst;
+  translateinhindisecond;
+  matchthecolumnfirst;
+  matchthecolumnsecond;
+  matchthecolumnthird;
+  matchthecolumnfourth;
+
 
   constructor(public navCtrl: NavController, public alertCtrl:AlertController) {
     // this.dd = {
@@ -137,9 +148,9 @@ export class HomePage {
               [{text: 'Q.No', style: 'tableHeader'}, {text: 'Question', style: 'tableHeader'}, {text: 'M.O/M.M', style: 'tableHeader'}],
               [{text: 'Creative Writing', colSpan: 2},{},{}],
               [{text: '1', rowSpan:13},{ text: 'Write 5 lines (Any 1 out of 3 ) \n' +
-              '1. Dog\n' +
-              '2. Cow\n' +
-              '3. Cat\n' +
+              '1 '+this.firstValue+'\n' +
+                '2 '+this.secondValue+'\n' +
+                '3 '+this.thirdValue+'\n' +
               '_________________________________________________________________________________\n' +
               '_________________________________________________________________________________\n' +
               '_________________________________________________________________________________\n' +
@@ -175,29 +186,29 @@ export class HomePage {
               [{text: 'Q.No', style: 'tableHeader'}, {text: 'Question', style: 'tableHeader'}, {text: 'M.O/M.M', style: 'tableHeader'}],
               [{text: 'Grammar', colSpan: 2},{},{}],
               [{text: '1'},{ text: 'Write Vowels and Consonants separately. \n\n\n  \n ' +
-              '1. Mouse \n ' +
+              '1. '+ this.vowelconsonantfirst +'\n ' +
               'V: _________________\n' +
               'C: _________________' +
-              '\n\n Boat \n ' +
+              '\n\n 2. '+this.vowelconsonantsecond+' \n ' +
               'V: __________________\n' +
               'C: ___________________'},{text: ''}],
 
 
               [{text: '2'},{ text: 'Circle the Vowels:  \n\n\n\n ' +
-              '1. B       N       I      D     O \n ' +
-              '\n\n2.  L     O     U     S      M \n '},{text: ''}],
+              '1. ' + this.circlethevowelsfirst +
+              '\n\n2. '+this.circlethevowelssecond+'\n '},{text: ''}],
 
 
               [{text: '3'},{ text: 'Translate the words in Hindi:   \n\n\n\n ' +
-              '1. some : _____________________________ \n ' +
-              '\n\n2.  any : _______________________________\n '},{text: ''}],
+              '1. '+ this.translateinhindifirst+' \n ' +
+              '\n\n2.'+ this.translateinhindisecond +'\n '},{text: ''}],
 
 
               [{text: '4'},{ text: 'Match the words with their Meanings:  \n\n\n\n ' +
-              '1. Safe                      To Go Out\n ' +
-              '2. Actual                    Lovely\n' +
-              '3. Cute                      Not in Danger\n' +
-              '4. Exit                      Real\n'},{text: ''}],
+              '1. '+ this.matchthecolumnfirst+'\n ' +
+              '2. '+ this.matchthecolumnsecond+'\n' +
+              '3. '+ this.matchthecolumnthird+'\n' +
+              '4. '+ this.matchthecolumnfourth+'\n'},{text: ''}],
               [{},{text: 'Total (Grammar)', alignment: 'right'},{}],
 
             ]
@@ -228,6 +239,19 @@ export class HomePage {
       ];
   }
 
+  getValue(index,value) {
+    if(index === '1') {
+      this.firstValue = value;
+    } else {
+      if(index === '2') {
+        this.secondValue = value;
+      }
+      else {
+        this.thirdValue = value;
+      }
+    }
+  }
+
   getData(question,one,two,three,four, index) {
     console.log(question);
     console.log(one);
@@ -239,4 +263,53 @@ export class HomePage {
     data['options'] = [one, two, three, four];
     this.questionList[index] = data;
   }
+
+  getVowelsConsonants(index,value) {
+    if(index === '1') {
+      this.vowelconsonantfirst = value ;
+    }
+    else {
+      this.vowelconsonantsecond = value;
+    }
+  }
+
+  circleTheVowels(index,value) {
+    if(index === '1') {
+      this.circlethevowelsfirst = value;
+    }
+    else {
+      this.circlethevowelssecond = value;
+    }
+  }
+
+  translateInHindi(index,value) {
+    if(index === '1') {
+      this.translateinhindifirst = value;
+    }
+    else {
+      this.translateinhindisecond = value;
+    }
+  }
+
+  matchTheColumn(index,value) {
+    if(index === '1') {
+      this.matchthecolumnfirst = value;
+    }
+    else {
+      if(index === '2') {
+        this.matchthecolumnsecond = value;
+      }
+      else {
+        if(index === '3') {
+          this.matchthecolumnthird = value;
+        }
+        else {
+          this.matchthecolumnfourth = value
+        }
+      }
+    }
+
+  }
+
+
 }
