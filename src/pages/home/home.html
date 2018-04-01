@@ -260,4 +260,225 @@
     </tbody>
   </table>
 
+  <div class="row">
+    <div class="col">Q.No</div>
+    <div class="col">Question</div>
+    <div class="col">M.O/M.M</div>
+  </div>
+
+  <div class="row">
+    <div class="col">5</div>
+    <div class="col">Put the words in 4 different heads of name, place, animal and thing.</div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #differentheads (ionChange)="getDifferentHeads(differentheads.value)">
+        <ion-option>Amit Pot India Mitu Rabbit</ion-option>
+        <ion-option>Shyam Plate America Rahul Cow</ion-option>
+      </ion-select>
+    </div>
+    <div class="col"></div>
+    <!-- Need to insert a table-->
+  </div>
+
+  <div class="row">
+    <div class="col">6</div>
+    <div class="col">give opposites:</div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #giveoppositefirst (ionChange)="getOpposite('1',giveoppositefirst.value)">
+        <ion-option>good</ion-option>
+        <ion-option>come</ion-option>
+        <ion-option>east</ion-option>
+      </ion-select>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #giveoppositesecond (ionChange)="getOpposite('2',giveoppositesecond.value)">
+        <ion-option>good</ion-option>
+        <ion-option>come</ion-option>
+        <ion-option>east</ion-option>
+      </ion-select>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #giveoppositethird (ionChange)="getOpposite('3',giveoppositethird.value)">
+        <ion-option>good</ion-option>
+        <ion-option>come</ion-option>
+        <ion-option>east</ion-option>
+      </ion-select>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col">Total (Grammar)</div>
+  </div>
+
+  <div class="row">
+    <div class="col">Vocabulary</div>
+  </div>
+
+  <div class="row">
+    <div class="col">1</div>
+    <div class="col">Answer the following questions:</div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #answerthefollowingquesfirst (ionChange)="getAnsTheFollowQues('1',answerthefollowingquesfirst.value)">
+        <ion-option>Are you a baby girl ?</ion-option>
+        <ion-option>List any two items that pets like to eat.</ion-option>
+        <ion-option>Write names of any two pet animals. </ion-option>
+        <ion-option>Where did Nonu lives ?</ion-option>
+        <ion-option>Who took out Sheena's kite?</ion-option>
+      </ion-select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #answerthefollowingquessecond (ionChange)="getAnsTheFollowQues('2',answerthefollowingquessecond.value)">
+        <ion-option>Are you a baby girl ?</ion-option>
+        <ion-option>List any two items that pets like to eat.</ion-option>
+        <ion-option>Write names of any two pet animals. </ion-option>
+        <ion-option>Where did Nonu lives ?</ion-option>
+        <ion-option>Who took out Sheena's kite?</ion-option>
+      </ion-select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #answerthefollowingquesthird (ionChange)="getAnsTheFollowQues('3',answerthefollowingquesthird.value)">
+        <ion-option>Are you a baby girl ?</ion-option>
+        <ion-option>List any two items that pets like to eat.</ion-option>
+        <ion-option>Write names of any two pet animals. </ion-option>
+        <ion-option>Where did Nonu lives ?</ion-option>
+        <ion-option>Who took out Sheena's kite?</ion-option>
+      </ion-select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #answerthefollowingquesfourth (ionChange)="getAnsTheFollowQues('4',answerthefollowingquesfourth.value)">
+        <ion-option>Are you a baby girl ?</ion-option>
+        <ion-option>List any two items that pets like to eat.</ion-option>
+        <ion-option>Write names of any two pet animals. </ion-option>
+        <ion-option>Where did Nonu lives ?</ion-option>
+        <ion-option>Who took out Sheena's kite?</ion-option>
+      </ion-select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #answerthefollowingquesfive (ionChange)="getAnsTheFollowQues('5',answerthefollowingquesfive.value)">
+        <ion-option>Are you a baby girl ?</ion-option>
+        <ion-option>List any two items that pets like to eat.</ion-option>
+        <ion-option>Write names of any two pet animals. </ion-option>
+        <ion-option>Where did Nonu lives ?</ion-option>
+        <ion-option>Who took out Sheena's kite?</ion-option>
+      </ion-select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">8</div>
+    <div class="col">Fill in the blanks:</div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #fillintheblanksfirst (ionChange)="getFillInTheBlanks('1',fillintheblanksfirst.value)">
+        <ion-option>I am _______________years old ?</ion-option>
+        <ion-option>We love to play with friends and ____________ </ion-option>
+        <ion-option>The colony of browny is ___________</ion-option>
+        <ion-option>Nonu was ____________ months old</ion-option>
+        <ion-option>Chunky loved to jump from ____________</ion-option>
+      </ion-select>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #fillintheblankssecond (ionChange)="getFillInTheBlanks('2',fillintheblankssecond.value)">
+        <ion-option>I am _______________years old ?</ion-option>
+        <ion-option>We love to play with friends and ____________ </ion-option>
+        <ion-option>The colony of browny is ___________</ion-option>
+        <ion-option>Nonu was ____________ months old</ion-option>
+        <ion-option>Chunky loved to jump from ____________</ion-option>
+      </ion-select>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #fillintheblanksthird (ionChange)="getFillInTheBlanks('3',fillintheblanksthird.value)">
+        <ion-option>I am _______________years old ?</ion-option>
+        <ion-option>We love to play with friends and ____________ </ion-option>
+        <ion-option>The colony of browny is ___________</ion-option>
+        <ion-option>Nonu was ____________ months old</ion-option>
+        <ion-option>Chunky loved to jump from ____________</ion-option>
+      </ion-select>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #fillintheblanksfour (ionChange)="getFillInTheBlanks('4',fillintheblanksfour.value)">
+        <ion-option>I am _______________years old ?</ion-option>
+        <ion-option>We love to play with friends and ____________ </ion-option>
+        <ion-option>The colony of browny is ___________</ion-option>
+        <ion-option>Nonu was ____________ months old</ion-option>
+        <ion-option>Chunky loved to jump from ____________</ion-option>
+      </ion-select>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <ion-select #fillintheblanksfive (ionChange)="getFillInTheBlanks('5',fillintheblanksfour.value)">
+        <ion-option>I am _______________years old ?</ion-option>
+        <ion-option>We love to play with friends and ____________ </ion-option>
+        <ion-option>The colony of browny is ___________</ion-option>
+        <ion-option>Nonu was ____________ months old</ion-option>
+        <ion-option>Chunky loved to jump from ____________</ion-option>
+      </ion-select>
+    </div>
+    <div class="col"></div>
+  </div>
 </ion-content>

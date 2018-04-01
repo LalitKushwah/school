@@ -27,6 +27,20 @@ export class HomePage {
   matchthecolumnsecond;
   matchthecolumnthird;
   matchthecolumnfourth;
+  differentheadsfirst;
+  giveoppositefirst;
+  giveoppositesecond;
+  giveoppositethird;
+  answerthefollowingquesfirst;
+  answerthefollowingquessecond;
+  answerthefollowingquesthird;
+  answerthefollowingquesfourth;
+  answerthefollowingquesfive;
+  fillintheblanksfirst;
+  fillintheblankssecond;
+  fillintheblanksthird;
+  fillintheblanksfour;
+  fillintheblanksfive;
 
 
   constructor(public navCtrl: NavController, public alertCtrl:AlertController) {
@@ -234,7 +248,7 @@ export class HomePage {
             body: [
               [{text: 'Q.No', style: 'tableHeader'}, {text: 'Question', style: 'tableHeader'}, {text: 'M.O/M.M', style: 'tableHeader'}],
               [{text: '5'},[ 'Put the words in 4 different heads of name, place, animal and thing. \n\n\n' +
-              'Amit       Pot     India     Mitu     Rabbit  \n '
+              this.differentheadsfirst +'\n '
                 , {	table: {
                 body: [
                   ['Name', 'Place', 'Animal', 'Thing'],
@@ -245,24 +259,24 @@ export class HomePage {
 
 
               [{text: '6'},{ text: 'Give Opposites of:  \n\n\n\n ' +
-              '1. Good : _______________' +
-              '\n\n2.  Come : _________________' +
-              '\n\n 3. East : ___________________ '},{text: ''}],
+              '1. '+this.giveoppositefirst+' : _______________' +
+              '\n\n2. '+this.giveoppositesecond+' : _________________' +
+              '\n\n 3. '+this.giveoppositethird+' : ___________________ '},{text: ''}],
 
 
               [{text: '7'},{ text: 'Answer the following Questions:  \n\n\n\n ' +
-              '1. Are you a Boy or Girl ? \n\n __________________________________________\n' +
-              '\n\n2. List any 2 items that pets like to eat ? \n\n ________________________________________\n' +
-              '\n\n 3. Write names of any 2 pet animals. \n\n __________________________________________\n' +
-              '\n\n 4. Where did Nonu live? \n\n __________________________________________\n' +
-              '\n\n 5. Who took out Sheena\'s Kite. \n\n __________________________________________\n\n\n'},{text: ''}],
+              '1. '+this.answerthefollowingquesfirst+' \n\n __________________________________________\n' +
+              '\n\n2. '+ this.answerthefollowingquessecond+' \n\n ________________________________________\n' +
+              '\n\n 3. '+this.answerthefollowingquesthird+' \n\n __________________________________________\n' +
+              '\n\n 4. '+this.answerthefollowingquesfourth+' \n\n __________________________________________\n' +
+              '\n\n 5. '+this.answerthefollowingquesfive+' \n\n __________________________________________\n\n\n'},{text: ''}],
 
               [{text: '8'},{ text: 'Fill in the blanks:  \n\n\n\n ' +
-              '1. I am ___________ years old ? \n\n ' +
-              '\n\n2. We love to play with friends and _________ \n\n' +
-              '\n\n 3. The color of browny is ___________ \n\n ' +
-              '\n\n 4. Nonu was _______ months old \n\n' +
-              '\n\n 5. Chunky loved to jump from ____________ \n\n'},{text: ''}],
+              '1. '+this.fillintheblanksfirst+' \n\n ' +
+              '\n\n2.'+this.fillintheblankssecond+'\n\n' +
+              '\n\n 3. '+this.fillintheblanksthird+' \n\n ' +
+              '\n\n 4.'+this.fillintheblanksfour+' \n\n' +
+              '\n\n 5. '+this.fillintheblanksfive+' \n\n'},{text: ''}],
 
 
               [{text: '9'},{ text: '\nGood Handwriting \n\n\n Students should write in good handwriting because marks will be allotted for good handwriting'},{text: ''}],
@@ -274,7 +288,7 @@ export class HomePage {
         },
         ]};
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
-    pdfMake.createPdf(this.dd).open();
+    pdfMake.createPdf(this.dd).download();
     // pdfMake.createPdf(this.dd).download();
   }
 
@@ -362,6 +376,70 @@ export class HomePage {
     }
 
   }
+  getDifferentHeads(value) {
+    this.differentheadsfirst = value;
+  }
 
+  getOpposite(index,value) {
+    if(index === '1') {
+      this.giveoppositefirst = value;
+    }
+    else {
+      if(index === '2') {
+        this.giveoppositesecond = value;
+      }
+      else {
+        this.giveoppositethird = value;
+      }
+    }
+  }
+
+  getAnsTheFollowQues(index,value) {
+    if(index === '1') {
+      this.answerthefollowingquesfirst = value;
+    }
+    else {
+      if(index === '2') {
+        this.answerthefollowingquessecond = value;
+      }
+      else {
+        if(index === '3') {
+          this.answerthefollowingquesthird = value;
+        }
+        else {
+          if(index === '4') {
+            this.answerthefollowingquesfourth = value;
+          }
+          else {
+            this.answerthefollowingquesfive = value;
+          }
+        }
+      }
+    }
+  }
+
+  getFillInTheBlanks(index,value) {
+      if(index === '1') {
+        this.fillintheblanksfirst = value;
+      }
+      else {
+        if(index === '2') {
+          this.fillintheblankssecond = value;
+        }
+        else {
+          if(index === '3') {
+            this.fillintheblanksthird = value;
+          }
+          else {
+            if(index === '4') {
+              this.fillintheblanksfour = value;
+            }
+            else {
+              this.fillintheblanksfive = value;
+            }
+          }
+        }
+      }
+  }
 
 }
