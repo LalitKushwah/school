@@ -139,6 +139,7 @@ export class HomePage {
         {text: 'Roll No:________    Class: ________    Section:________    Duration:________', margin: [0,20]},
         {text: 'Name of Student: _____________________________________________________________', margin: [0,20]},
         {text: 'Name and sign of invigilator:_________________________________________________', margin: [0,20]},
+
         {
           style: 'tableExample',
           table: {
@@ -177,6 +178,7 @@ export class HomePage {
             ]
           }
         }, // Question 1 Creative Writing
+
         {
           style: 'tableExample',
           table: {
@@ -204,23 +206,73 @@ export class HomePage {
               '\n\n2.'+ this.translateinhindisecond +'\n '},{text: ''}],
 
 
-              [{text: '4'},{ text: 'Match the words with their Meanings:  \n\n\n\n ' +
+              [{text: '4', rowSpan: 10},{ text: 'Match the words with their Meanings:  \n\n\n\n ' +
               '1. '+ this.matchthecolumnfirst+'\n ' +
               '2. '+ this.matchthecolumnsecond+'\n' +
               '3. '+ this.matchthecolumnthird+'\n' +
-              '4. '+ this.matchthecolumnfourth+'\n'},{text: ''}],
+              '4. '+ this.matchthecolumnfourth+'\n\n\n\n\n\n\n\n\n\n\n\n', rowSpan: 10},{text: '', rowSpan: 10}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
+              [{},{},{}],
               [{},{text: 'Total (Grammar)', alignment: 'right'},{}],
 
             ]
           }
         },
+
+        {
+          style: 'tableExample',
+          table: {
+            widths: ['auto', 400, 'auto'],
+            headerRows: 1,
+            body: [
+              [{text: 'Q.No', style: 'tableHeader'}, {text: 'Question', style: 'tableHeader'}, {text: 'M.O/M.M', style: 'tableHeader'}],
+              [{text: '5'},[ 'Put the words in 4 different heads of name, place, animal and thing. \n\n\n' +
+              'Amit       Pot     India     Mitu     Rabbit  \n '
+                , {	table: {
+                body: [
+                  ['Name', 'Place', 'Animal', 'Thing'],
+                  ['\n\n\n', '\n\n\n', '\n\n\n', '\n\n\n'],
+                  ['\n\n\n', '\n\n\n', '\n\n\n', '\n\n\n']
+                ]
+              }}],{text: ''}],
+
+
+              [{text: '6'},{ text: 'Give Opposites of:  \n\n\n\n ' +
+              '1. Good : _______________' +
+              '\n\n2.  Come : _________________' +
+              '\n\n 3. East : ___________________ '},{text: ''}],
+
+
+              [{text: '7'},{ text: 'Answer the following Questions:  \n\n\n\n ' +
+              '1. Are you a Boy or Girl ? \n\n __________________________________________\n' +
+              '\n\n2. List any 2 items that pets like to eat ? \n\n ________________________________________\n' +
+              '\n\n 3. Write names of any 2 pet animals. \n\n __________________________________________\n' +
+              '\n\n 4. Where did Nonu live? \n\n __________________________________________\n' +
+              '\n\n 5. Who took out Sheena\'s Kite. \n\n __________________________________________\n\n\n'},{text: ''}],
+
+              [{text: '8'},{ text: 'Fill in the blanks:  \n\n\n\n ' +
+              '1. I am ___________ years old ? \n\n ' +
+              '\n\n2. We love to play with friends and _________ \n\n' +
+              '\n\n 3. The color of browny is ___________ \n\n ' +
+              '\n\n 4. Nonu was _______ months old \n\n' +
+              '\n\n 5. Chunky loved to jump from ____________ \n\n'},{text: ''}],
+
+
+              [{text: '9'},{ text: '\nGood Handwriting \n\n\n Students should write in good handwriting because marks will be allotted for good handwriting'},{text: ''}],
+
+              [{text: '10'},{ text: '\nCorrect Spellings \n\n\n Students should write with correct spellings'},{text: ''}]
+
+            ]
+          }
+        },
         ]};
-          /*    this.questionList.forEach( item => {
-              this.dd.content.push({text: item.question, style: 'question'}, {ol: [{text: item.options[0]},
-                {text: item.options[1]},
-                {text: item.options[2]},
-                {text: item.options[3]}], style: 'options'});
-              });*/
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
     pdfMake.createPdf(this.dd).open();
     // pdfMake.createPdf(this.dd).download();
