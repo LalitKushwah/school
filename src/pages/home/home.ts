@@ -255,7 +255,19 @@ export class HomePage {
               '\n\n2. List any 2 items that pets like to eat ? \n\n ________________________________________\n' +
               '\n\n 3. Write names of any 2 pet animals. \n\n __________________________________________\n' +
               '\n\n 4. Where did Nonu live? \n\n __________________________________________\n' +
-              '\n\n 5. Who took out Sheena\'s Kite. \n\n __________________________________________\n\n\n'},{text: ''}]
+              '\n\n 5. Who took out Sheena\'s Kite. \n\n __________________________________________\n\n\n'},{text: ''}],
+
+              [{text: '8'},{ text: 'Fill in the blanks:  \n\n\n\n ' +
+              '1. I am ___________ years old ? \n\n ' +
+              '\n\n2. We love to play with friends and _________ \n\n' +
+              '\n\n 3. The color of browny is ___________ \n\n ' +
+              '\n\n 4. Nonu was _______ months old \n\n' +
+              '\n\n 5. Chunky loved to jump from ____________ \n\n'},{text: ''}],
+
+
+              [{text: '9'},{ text: '\nGood Handwriting \n\n\n Students should write in good handwriting because marks will be allotted for good handwriting'},{text: ''}],
+
+              [{text: '10'},{ text: '\nCorrect Spellings \n\n\n Students should write with correct spellings'},{text: ''}]
 
             ]
           }
